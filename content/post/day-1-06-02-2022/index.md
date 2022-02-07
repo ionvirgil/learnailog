@@ -1,5 +1,5 @@
 ---
-title: Day 1 - 06.02.2022
+title: Day 1 - Controlled experiments and Histograms
 date: 2022-02-07T14:59:22.363Z
 draft: false
 featured: false
