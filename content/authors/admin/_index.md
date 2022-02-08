@@ -1,6 +1,7 @@
 ---
 title: Ion Virgil
 role: To be seen
+avatar_filename: avatar.jpg
 bio: My research interests include distributed robotics, mobile computing and
   programmable matter.
 social:
