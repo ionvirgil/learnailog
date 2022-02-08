@@ -91,16 +91,14 @@ Method of finding the square root:
 
 Consider, for example, finding the square root of 25. 
 
-1.  Set g to some arbitrary value, e.g., 3. 
-2.  We decide that 3*3 = 9 is not close enough to 25. 
-3.  Set g to (3 + 25/3)/2 = 5.67.
-4.  We decide that 5.67*5.67 = 32.15 is still not close enough to 25.
-5.  Set g to (5.67 + 25/5.67)/2 = 5.04 
-6.  We decide that 5.04*5.04 = 25.4 is close enough, so we stop and declare 5.04 to be an adequate approximation to the square root of 25
+1. Set g to some arbitrary value, e.g., 3. 
+2. We decide that 3*3 = 9 is not close enough to 25. 
+3. Set g to (3 + 25/3)/2 = 5.67.
+4. We decide that 5.67*5.67 = 32.15 is still not close enough to 25.
+5. Set g to (5.67 + 25/5.67)/2 = 5.04 
+6. We decide that 5.04*5.04 = 25.4 is close enough, so we stop and declare 5.04 to be an adequate approximation to the square root of 25
 
 <!--EndFragment-->
-
-
 
 This example describes an **algorithm**. An algorithm is a finite list of instructions that describe a **computation.**
 
@@ -203,7 +201,6 @@ The built in function "type()"can be used to find out the type of an object
 ```python
 type(3) # this prints the type int
 type(3.0)# this prints the type float
-
 ```
 
 **Operators**: 
@@ -211,17 +208,13 @@ type(3.0)# this prints the type float
 i+j is the sum of i and j. If i and j are both of type int, the result is an int. If
 either of them is a float, the result is a float.
 
-
 i–j is i minus j. If i and j are both of type int, the result is an int. If either of
 them is a float, the result is a float.
-
 
 i*j is the product of i and j. If i and j are both of type int, the result is an int.
 If either of them is a float, the result is a float.
 
-
 i//j is integer division. For example, the value of 6//2 is the int 3 and the value of 6//4 is the int 1. The value is 1 because integer division returns the quotient and ignores the remainder. If j == 0, an error occurs.
-
 
 i/j is i divided by j. In Python 3, the / operator, performs floating point division. For example, the value of 6/4 is 1.5. 
 
@@ -229,10 +222,8 @@ If j == 0, an error occurs. (In Python 2, when i and j are both of type int, the
 way as // and returns an int. If either i or j is a float, it behaves like the Python 3 / operator.)
 i%j is the remainder when the int i is divided by the int j. It is typically pronounced “i mod j,” which is short for “i modulo j.”
 
-
 i\*\*j is i raised to the power j. If i and j are both of type int, the result is an
 int. If either of them is a float, the result is a float.
-
 
 The comparison operators are == (equal), != (not equal), > (greater), >= (at
 least), <, (less) and <= (at most).
@@ -252,7 +243,6 @@ radius = 11 # binds radius
 area = pi * (radius **2)
 radius = 14 #this binds the value but to no effect to area because that line is already evaluated
 # A VARIABLE IS JUST A NAME, NOTHING MORE. AN ASSIGNMENT STATEMENT ASSOCIATES THE NAME TO THE LEFT OF THE = SYMBOL WITH THE OBJECT DENOTED BY THE EXPRESSION TO THE RIGHT OF THE = 
-
 ```
 
 **!!!!PYTHON IS CASE SENSITIVE**
@@ -265,3 +255,24 @@ Use **COMMENTS** for **YOU** and **OTHERS TO UNDERSTAND THE CODE**.
 ***Did not know:***
     Python allows multiple assignment
     x, y = 2, 3 binds x to 2 and y to 3.
+
+
+
+***Assignment 0*** 
+
+**Write A Very Simple Program: Raising a number to a power and taking a logarithm**
+
+```python
+import numpy as np#import numpy, using it as "np"
+
+print("Enter number x: ")#where x is the number
+x = input() #the value of input is str
+number=int(x)# convert the value of input to int
+print("Enter number y: ") #where y is the power
+y = input()
+power=int(y)
+result_power=number**power # raise the number to power, USE the new variables in which you assigned x and y
+print(result_power)
+logvalue=np.log2(result_power)#calculate the log and assign to logvalue
+print(logvalue)# print the value
+```
