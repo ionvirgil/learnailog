@@ -122,13 +122,13 @@ By creating an instruction-set architecture and detailing the computation as a s
 
 The heart of the computer then becomes a program = interpreter that can execute any legal set of instructions.
 
-The flow of control:
+**The flow of control:**
 
 Data and the program are in memory. There is a program counter that points to a particular location in memory, then the computation starts by executing the instruction at that point. 
 
 The interpreter goes to the next instruction or it performs a test. Based on that test it can jump to a different point in the sequence of instructions.
 
-The **Church-Turing thesis** states that if a function in computable, a Turing Machine can be programmed to compute it.
+The **Church-Turing thesis** states that if a function is computable, a Turing Machine can be programmed to compute it.
 
 The **Universal Turing Machine** (named by Alan Turing) had an unbounded memory in the form of a "tape" on which one could write zeroes and ones, and some very simple primitive instructions for moving, reading, and writing to the tape. 
 
@@ -138,7 +138,7 @@ The **Universal Turing Machine** (named by Alan Turing) had an unbounded memory 
 
 A programming language is said to be Turing complete if it can be used to simulate a universal Turing Machine. All modern programming languages are Turing complete.  ***Anything programmed in Python can be programmed in any other language.***
 
-**Modern programming language have a much larger set of primitives.**
+**Modern programming languages have a much larger set of primitives.**
 
 **Primitives** in Python: literals (3.2 and the string "abc") and infix operators (+ and /) - Examples
 
@@ -149,3 +149,119 @@ The **syntax** of a programming language is the same as the native language. You
 **Semantics**. Just like native languages, you can write something and mean a thing, but the result is that you insult the other person. This is the same in programming, a program must do the thing you want it to do. If it doesn't but still works, then it has failed. 
 
 > **Finger exercise**: Computers can be annoyingly literal. If you don’t tell them exactly what you want them to do, they are likely to do the wrong thing. Try writing an algorithm for driving between two destinations. Write it the way you would for a person, and then imagine what would happen if that person were as stupid as a computer, and executed the algorithm exactly as written. How many traffic tickets might that person get?
+
+**Low level vs. high-level**: program using instructions and data objects at the level of the machine (move 64 bits of data from this location to that location) or whether we program using more abstract operations (e.g. pop up a menu on the screen) that have been provided by the language designer. 
+
+**General vs. targeted** to an application: e.g. Python - general, SQL - targeted - you cannot build an operation system with it.
+
+**Interpreted vs. compiled:** Python - interpreted by the interpreter, C - compiled - it is first converted by a compiler in a sequence of machine-level primitive operations.
+
+**Chapter 2.1. - The basic elements of Python**
+
+**A python program, also called a script is a sequence of definitions and commands**
+
+Computational thinking?
+
+* Declarative knowledge
+* Imperative knowledge
+
+A command is a statement
+
+```python
+print('yankees rule!')
+print("but not in boston")
+print("yankees rule,","but not in boston!")
+
+yankees rule!
+but not in boston
+yankees rule, but not in boston!
+```
+
+The print function takes a variable number of arguments separated by commas, and prints them separated by a space character
+
+Every object has a type.
+Types are scalar or non-scalar.
+Scalar objects are indivisible.
+Non-scalar objects, for example, strings, have internal structure.
+Many types of objects can be denoted by literals: 
+    the text 2 is a literal representing a number
+    the text "abc" a literal representing a string
+The 4 types of scalar objects in python:
+    int - used to represent integers (2, -3, 5, 10002)
+    float - used to represent real numbers (3.0, 3.17, -28.72)
+    bool - used to represent the boolean values True and False
+    None - type with a single value.
+Objects and operators can be combined to form expressions.
+The expression 3+2 denotes the object 5 of type int.
+The expression 3.0 + 2.0 denotes the object 5.0 of type float.
+The == operator is used to test whether two expressions evaluate to the same value.
+The !- operator us used to test whether two expressions evaluate to different values.
+A single = means something quite different (from what i know of this is the assignment operator)
+The simbol >>> is a shell prompt indicating that the interpreter is expecting the user to type some python code in the shell.
+The built in function "type()"can be used to find out the type of an object
+
+```python
+type(3) # this prints the type int
+type(3.0)# this prints the type float
+
+```
+
+**Operators**: 
+
+i+j is the sum of i and j. If i and j are both of type int, the result is an int. If
+either of them is a float, the result is a float.
+
+
+i–j is i minus j. If i and j are both of type int, the result is an int. If either of
+them is a float, the result is a float.
+
+
+i*j is the product of i and j. If i and j are both of type int, the result is an int.
+If either of them is a float, the result is a float.
+
+
+i//j is integer division. For example, the value of 6//2 is the int 3 and the value of 6//4 is the int 1. The value is 1 because integer division returns the quotient and ignores the remainder. If j == 0, an error occurs.
+
+
+i/j is i divided by j. In Python 3, the / operator, performs floating point division. For example, the value of 6/4 is 1.5. 
+
+If j == 0, an error occurs. (In Python 2, when i and j are both of type int, the / operator behaves the same
+way as // and returns an int. If either i or j is a float, it behaves like the Python 3 / operator.)
+i%j is the remainder when the int i is divided by the int j. It is typically pronounced “i mod j,” which is short for “i modulo j.”
+
+
+i\*\*j is i raised to the power j. If i and j are both of type int, the result is an
+int. If either of them is a float, the result is a float.
+
+
+The comparison operators are == (equal), != (not equal), > (greater), >= (at
+least), <, (less) and <= (at most).
+
+**Operators order is the same as in math.**
+
+**The primitive  operators** on type bool are and, or, and not:
+    a and b is True if both a and b are True, and False otherwise
+    a or b is True if at least one of a or b is True, and False otherwise
+    not a is True if a is False, and False if a is True
+
+**Variables and assignment**
+
+```python
+pi = 3 # binds pi to object of type int
+radius = 11 # binds radius 
+area = pi * (radius **2)
+radius = 14 #this binds the value but to no effect to area because that line is already evaluated
+# A VARIABLE IS JUST A NAME, NOTHING MORE. AN ASSIGNMENT STATEMENT ASSOCIATES THE NAME TO THE LEFT OF THE = SYMBOL WITH THE OBJECT DENOTED BY THE EXPRESSION TO THE RIGHT OF THE = 
+
+```
+
+**!!!!PYTHON IS CASE SENSITIVE**
+
+There are built in words in Python called keywords, and cannot be used as variable names.
+**The reserved words in python 3 are:** and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, nonlocal, None, not, or, pass, raise, return, True, try, while, with, and yield.
+Use variable names **TO BETTER UNDERSTAND THE CODE**.
+Use **COMMENTS** for **YOU** and **OTHERS TO UNDERSTAND THE CODE**.
+
+***Did not know:***
+    Python allows multiple assignment
+    x, y = 2, 3 binds x to 2 and y to 3.
