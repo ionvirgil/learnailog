@@ -9,9 +9,9 @@ image:
   focal_point: Smart
   preview_only: false
 ---
+Log: Today I solved the exercices from Lecture 1 discussed in class. Also, I read and absorbed the chapters from 1 to 2.1 from the textbook Introduction to Computation and Programming Using Python with Application to Understanding Data.
+
 ## In class questions and video solutions
-
-
 
 Exercise 1. Running the code below from the editor
 
@@ -67,3 +67,26 @@ Calculating again the total_gold will print 75.
     total_gold = usa_gold + uk_gold + romania_gold
     print(total_gold)
 ```
+
+## Readings - Chapters 1 - 2.1.
+
+Computational thinking can be described in Declarative Knowledge and Imperative Knowledge.
+
+**Declarative knowledge** is simply a statement of fact. One good example is "the square root of x is a number y, such as y*y = x". 
+
+**Imperative knowledge** is the "how to" knowledge. How do you do this, or how do you do that. Heron of Alexandria is the first person who documented how a square root can be extracted from a number.
+
+Method of finding the square root:
+
+1. Start with a guess called g
+2. If g*g is close enough to x, stop and say that g is the answer
+3. Otherwise create a new guess by averaging g and x/g, i.e., (g+x/g)/2
+4. Using this new guess, which we again call g, repeat the process until g*g is close enough to x
+
+**Example**
+
+<!--StartFragment-->
+
+Consider, for example, finding the square root of 25. 1. Set g to some arbitrary value, e.g., 3. 2. We decide that 3\*3 = 9 is not close enough to 25. 3. Set g to (3 + 25/3)/2 = 5.67.3 4. We decide that 5.67\*5.67 = 32.15 is still not close enough to 25. 5. Set g to (5.67 + 25/5.67)/2 = 5.04 6. We decide that 5.04*5.04 = 25.4 is close enough, so we stop and declare 5.04 to be an adequate approximation to the square root of 25
+
+<!--EndFragment-->
