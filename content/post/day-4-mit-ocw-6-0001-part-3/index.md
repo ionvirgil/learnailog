@@ -140,8 +140,6 @@ False
 
 **Control flow - branching**
 
-
-
 **1. if<condition):**
 
  **\    <expression>**
@@ -192,3 +190,29 @@ False
 
 * <condition> has a value True or False
 * evaluate expressions in that block if <condition> is True
+
+**Indentation** - WRITING GOOD AND CLEAR CODE
+
+```python
+x = float(input("Enter a number for x: "))
+y = float(input("Enter a number for y: "))
+# in case you enter two similar values, 2 and 2 there's no point in seing with is smaller
+# you condition it and print that if x and y are the same, the division is 1 and they are equal
+if x==y:
+    print("x and y are equal")
+    if y!=0: 
+        print("therefore, x/y is", x/y)
+        # if x is smaller then print accordingly
+elif x<y:
+    print("x is smaller")
+else: 
+  # if y is smaller then print accordingly
+    print("y is smaller")
+print("thanks!")
+```
+
+**\= vs ==** 
+
+\= -> attribution
+
+\== -> equal, boolean
