@@ -29,8 +29,6 @@ text_left<-function(plot)
 }
 ```
 
-
-
 **Function to add logo and caption bellow ggplot**
 
 ```r
@@ -75,11 +73,9 @@ custom_theme<-function(legend_p)
 }
 ```
 
-
-
 ## **Data wrangling**
 
-
+**Count column A by column B and plot a Bar Chart**
 
 ```r
 # filter dataframe with by specific condition
@@ -109,9 +105,6 @@ coord_flip()
 final_plot<-text_left(p)
 # add custom logo and caption
 final_plot <- grid.arrange(final_plot,add_footer("Sursa: RNCIS",img2),heights=c(9,0.6))
-
 ```
-
-
 
 ![](rplot.png)
