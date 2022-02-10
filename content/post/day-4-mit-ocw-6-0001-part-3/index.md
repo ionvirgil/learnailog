@@ -1,5 +1,5 @@
 ---
-title: Day 4 - MIT OCW 6.0001 - Part 3
+title: Day 4 - MIT OCW 6.0001 - Lecture 2 - Part 1
 date: 2022-02-09T14:05:20.952Z
 draft: false
 featured: false
